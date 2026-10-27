@@ -1,0 +1,171 @@
+{
+  "expected_total": 4000,
+  "comparisons": [
+    {
+      "name": "worker counter (local build)",
+      "expected_total": 4000,
+      "actual_total": 3999,
+      "per_language": [
+        {
+          "language": "c",
+          "expected": 79,
+          "actual": 79
+        },
+        {
+          "language": "cpp",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "language": "dockerfile",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "language": "go",
+          "expected": 334,
+          "actual": 334
+        },
+        {
+          "language": "java",
+          "expected": 135,
+          "actual": 135
+        },
+        {
+          "language": "javascript",
+          "expected": 915,
+          "actual": 914
+        },
+        {
+          "language": "php",
+          "expected": 182,
+          "actual": 182
+        },
+        {
+          "language": "python",
+          "expected": 1977,
+          "actual": 1977
+        },
+        {
+          "language": "shell",
+          "expected": 177,
+          "actual": 177
+        },
+        {
+          "language": "terraform",
+          "expected": 13,
+          "actual": 13
+        },
+        {
+          "language": "typescript",
+          "expected": 151,
+          "actual": 151
+        },
+        {
+          "language": "xml",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "language": "yaml",
+          "expected": 13,
+          "actual": 13
+        }
+      ],
+      "unexpectedly_counted": [],
+      "missing_counted": [],
+      "per_file_mismatch": [
+        {
+          "file": "loc/edge/inline-block-comment.js",
+          "expected": 3,
+          "actual": 2,
+          "known_model_divergence": true
+        }
+      ]
+    },
+    {
+      "name": "CLI counter",
+      "expected_total": 4000,
+      "actual_total": 3999,
+      "per_language": [
+        {
+          "language": "c",
+          "expected": 79,
+          "actual": 79
+        },
+        {
+          "language": "cpp",
+          "expected": 11,
+          "actual": 11
+        },
+        {
+          "language": "dockerfile",
+          "expected": 6,
+          "actual": 6
+        },
+        {
+          "language": "go",
+          "expected": 334,
+          "actual": 334
+        },
+        {
+          "language": "java",
+          "expected": 135,
+          "actual": 135
+        },
+        {
+          "language": "javascript",
+          "expected": 915,
+          "actual": 914
+        },
+        {
+          "language": "php",
+          "expected": 182,
+          "actual": 182
+        },
+        {
+          "language": "python",
+          "expected": 1977,
+          "actual": 1977
+        },
+        {
+          "language": "shell",
+          "expected": 177,
+          "actual": 177
+        },
+        {
+          "language": "terraform",
+          "expected": 13,
+          "actual": 13
+        },
+        {
+          "language": "typescript",
+          "expected": 151,
+          "actual": 151
+        },
+        {
+          "language": "xml",
+          "expected": 7,
+          "actual": 7
+        },
+        {
+          "language": "yaml",
+          "expected": 13,
+          "actual": 13
+        }
+      ],
+      "unexpectedly_counted": [],
+      "missing_counted": [],
+      "per_file_mismatch": [
+        {
+          "file": "loc/edge/inline-block-comment.js",
+          "expected": 3,
+          "actual": 2,
+          "known_model_divergence": true
+        }
+      ]
+    }
+  ],
+  "worker_cli_identical": true,
+  "sonarcloud": "pending"
+}

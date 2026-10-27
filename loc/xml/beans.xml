@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Spring bean definitions for the LOC fixture. -->
+<beans xmlns="http://www.springframework.org/schema/beans">
+
+  <!--
+    Multi-line XML comment.
+  -->
+  <bean id="clock" class="java.time.Clock" factory-method="systemUTC"/>
+  <bean id="greeter" class="com.example.loc.Greeter">
+    <property name="greeting" value="hello"/> <!-- trailing comment keeps the line as code -->
+  </bean>
+</beans>

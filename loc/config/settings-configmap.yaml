@@ -1,0 +1,9 @@
+# Kubernetes manifest: still counted as YAML.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: regression-settings
+data:
+  LOG_LEVEL: info
+
+  FEATURE_FLAGS: "alpha,beta"

@@ -1,0 +1,5 @@
+# Docker Compose file: runtime configuration, not counted.
+services:
+  app:
+    image: python:3.12-slim
+    command: ["python", "service.py"]

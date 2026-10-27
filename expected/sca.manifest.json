@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/build-manifest.py from scripts/case_catalog.py",
+  "line_convention": "1-based line of the sink (marker line); expected_span runs to the line where that statement's brackets close. A finding matches when its start..end range intersects expected_span (SCA: file-level).",
+  "cases": [
+    {
+      "test_id": "SCA-LOC-001",
+      "issue": "loc-exclusions",
+      "language": "javascript",
+      "file": "loc/excluded-files/package-lock.json",
+      "expected": "detected",
+      "finding_type": "sca",
+      "expected_class": "vulnerable-dependency",
+      "expected_rule_ids": [
+        "CVE-2021-23337"
+      ],
+      "expected_cwe": [
+        "CWE-94"
+      ],
+      "expected_line": 14,
+      "expected_span": [
+        14,
+        14
+      ],
+      "expected_count": 1,
+      "description": "lodash 4.17.20 in package-lock.json (CVE-2021-23337, command injection in template)",
+      "status": "supported"
+    }
+  ]
+}

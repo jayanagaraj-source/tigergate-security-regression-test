@@ -1,0 +1,5 @@
+# Interpreter caches only. Every fixture, manifest and report stays tracked: nothing a scanner must see
+# is hidden here. Raw engine output (which contains the synthetic secret values) is written outside the
+# repository by scripts/local-engine-scan.sh.
+__pycache__/
+*.pyc

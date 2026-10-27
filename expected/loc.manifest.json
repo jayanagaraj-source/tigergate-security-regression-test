@@ -1,0 +1,978 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/verify-loc.py --write-manifest",
+  "definition": "code lines (ncloc): lines with a non-comment, non-whitespace character; Python docstrings excluded",
+  "sonarcloud_status": "pending: no SonarCloud analysis of this exact commit has been compared",
+  "totals": {
+    "code": 4000,
+    "per_language": {
+      "c": 79,
+      "cpp": 11,
+      "dockerfile": 6,
+      "go": 334,
+      "java": 135,
+      "javascript": 915,
+      "php": 182,
+      "python": 1977,
+      "shell": 177,
+      "terraform": 13,
+      "typescript": 151,
+      "xml": 7,
+      "yaml": 13
+    }
+  },
+  "loc_fixture_totals": {
+    "code": 118,
+    "per_language": {
+      "dockerfile": 6,
+      "java": 10,
+      "javascript": 15,
+      "python": 23,
+      "terraform": 13,
+      "typescript": 37,
+      "xml": 7,
+      "yaml": 7
+    }
+  },
+  "files": [
+    {
+      "file": "cases/sast/cpp/format-string/format_safe.c",
+      "counted": true,
+      "language": "c",
+      "code": 38,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/cpp/format-string/format_unsafe.c",
+      "counted": true,
+      "language": "c",
+      "code": 41,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/cpp/format-string/report.cpp",
+      "counted": true,
+      "language": "cpp",
+      "code": 11,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/go/zip-slip/untar.go",
+      "counted": true,
+      "language": "go",
+      "code": 43,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/java/xss/src/main/java/com/example/regression/EncodedOutputServlet.java",
+      "counted": true,
+      "language": "java",
+      "code": 55,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/java/xss/src/main/java/com/example/regression/ReflectingServlet.java",
+      "counted": true,
+      "language": "java",
+      "code": 50,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/java/zip-slip/src/main/java/com/example/regression/ZipImporter.java",
+      "counted": true,
+      "language": "java",
+      "code": 20,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/format-string/request-formats.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 59,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/format-string/trusted-formats.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 57,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/log-injection/log-sinks.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 100,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/esm-imports.mjs",
+      "counted": true,
+      "language": "javascript",
+      "code": 19,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/edge-cases/basename.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 9,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/edge-cases/cli-argument.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 6,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/edge-cases/encoded-input.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 20,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/edge-cases/environment-path.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 6,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/edge-cases/symlink-containment.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 26,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/constant-path.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 10,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/generated-filename.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 12,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/path-containment.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 14,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/safe-async.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 9,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/safe-helper.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 13,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/safe-stream.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 6,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/static-config.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 15,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/strict-allowlist.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 16,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/typescript-safe.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 18,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/safe/validated-id.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 21,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/async-filesystem.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 16,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/direct-input.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 9,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/express-download.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 9,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/file-delete.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 15,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/file-stream.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 10,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/file-write.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 20,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/helper-function.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 12,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/path-join.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 12,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/template-literal.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 8,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/typescript-paths.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 12,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/legacy-corpus/vulnerable/weak-validation.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 16,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/path-traversal/resolve-normalize.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 75,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/xss/safe.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 48,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/xss/vulnerable.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 48,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/zip-slip/extract-safe.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 84,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/javascript/zip-slip/extract-unsafe.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 88,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/php/query-methods/clients.php",
+      "counted": true,
+      "language": "php",
+      "code": 38,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/php/sql-injection/queries.php",
+      "counted": true,
+      "language": "php",
+      "code": 73,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/php/xpath-injection/lookup.php",
+      "counted": true,
+      "language": "php",
+      "code": 71,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/python/sql-injection/flask_views.py",
+      "counted": true,
+      "language": "python",
+      "code": 107,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/python/sql-injection/inline_numeric.py",
+      "counted": true,
+      "language": "python",
+      "code": 29,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/python/sql-injection/inline_queries.py",
+      "counted": true,
+      "language": "python",
+      "code": 21,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/python/sql-injection/inline_shadowed.py",
+      "counted": true,
+      "language": "python",
+      "code": 8,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/python/zip-slip/archives.py",
+      "counted": true,
+      "language": "python",
+      "code": 11,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/typescript/format-string/logging.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 19,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/typescript/xss/handlers.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 24,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/sast/typescript/zip-slip/extract.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 41,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/identical-a/settings.py",
+      "counted": true,
+      "language": "python",
+      "code": 1,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/identical-b/settings.py",
+      "counted": true,
+      "language": "python",
+      "code": 1,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/mixed_types.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 3,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/multi_rule.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 2,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/nearby.py",
+      "counted": true,
+      "language": "python",
+      "code": 2,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/same_line.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 2,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/duplicate-detection/service-config.yaml",
+      "counted": true,
+      "language": "yaml",
+      "code": 6,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/edge/commented_key.py",
+      "counted": true,
+      "language": "python",
+      "code": 1,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/false-positive/aws_docs_example.py",
+      "counted": true,
+      "language": "python",
+      "code": 2,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/false-positive/placeholders.py",
+      "counted": true,
+      "language": "python",
+      "code": 6,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/false-positive/wallet.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 3,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/true-positive/aws_profile.py",
+      "counted": true,
+      "language": "python",
+      "code": 1,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/true-positive/billing_client.py",
+      "counted": true,
+      "language": "python",
+      "code": 1,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "cases/secrets/true-positive/session.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 2,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/app/app.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 5,
+      "basis": "hand-verified",
+      "notes": "JSDoc block excluded",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/app/service.py",
+      "counted": true,
+      "language": "python",
+      "code": 9,
+      "basis": "hand-verified",
+      "notes": "ordinary Python with a method docstring",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/app/src/main/java/com/example/loc/Greeter.java",
+      "counted": true,
+      "language": "java",
+      "code": 10,
+      "basis": "hand-verified",
+      "notes": "Javadoc and // excluded",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/build-files/Dockerfile",
+      "counted": true,
+      "language": "dockerfile",
+      "code": 6,
+      "basis": "hand-verified",
+      "notes": "counted by file name",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/build-files/Makefile",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "build configuration",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/build-files/README.md",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "documentation",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/build-files/build.gradle.kts",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "Gradle Kotlin DSL script: build configuration, not Kotlin",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/config/application.yml",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "Spring configuration (top-level spring:)",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/config/docker-compose.yml",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "Docker Compose (top-level services:)",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/config/settings-configmap.yaml",
+      "counted": true,
+      "language": "yaml",
+      "code": 7,
+      "basis": "hand-verified",
+      "notes": "Kubernetes manifest (apiVersion/kind) still counts",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/edge/inline-block-comment.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 3,
+      "basis": "hand-verified",
+      "notes": "a line opening with /* c */ then code is code",
+      "tigergate_model_code": 2,
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/Cargo.lock",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/Gemfile.lock",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/composer.lock",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/go.sum",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/npm-shrinkwrap.json",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/package-lock.json",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/package.json",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "JSON is not a counted language",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/pnpm-lock.yaml",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile (would otherwise count as YAML)",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/poetry.lock",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/uv.lock",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/excluded-files/yarn.lock",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "lockfile",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/generated-code/Settings.cs",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "<auto-generated> header",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/generated-code/api_client.ts",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "@generated header",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/generated-code/events_pb2.py",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "protoc header on line 2",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/generated-code/handwritten_client.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 6,
+      "basis": "hand-verified",
+      "notes": "mentions 'generated' but carries no marker",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/generated-code/late_marker.ts",
+      "counted": true,
+      "language": "typescript",
+      "code": 31,
+      "basis": "hand-verified",
+      "notes": "marker on line 33, past the 30-line header window",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/generated-code/queries.go",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "Code generated ... DO NOT EDIT. header",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/minified/analytics.min.js",
+      "counted": false,
+      "language": null,
+      "code": 0,
+      "basis": "hand-verified",
+      "notes": "*.min.js",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/minified/legacy-bundle.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 1,
+      "basis": "hand-verified",
+      "notes": "minified content without the .min.js suffix still counts (SonarCloud may exclude it by line length)",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/minified/widget.js",
+      "counted": true,
+      "language": "javascript",
+      "code": 6,
+      "basis": "hand-verified",
+      "notes": "ordinary JavaScript",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/python/docstrings.py",
+      "counted": true,
+      "language": "python",
+      "code": 14,
+      "basis": "hand-verified",
+      "notes": "module/class/def docstrings are documentation; an assigned triple-quoted string is code",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/terraform/main.tf",
+      "counted": true,
+      "language": "terraform",
+      "code": 13,
+      "basis": "hand-verified",
+      "notes": "#, // and /* */ comments excluded",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "loc/xml/beans.xml",
+      "counted": true,
+      "language": "xml",
+      "code": 7,
+      "basis": "hand-verified",
+      "notes": "<!-- --> comments excluded; trailing comment line is code",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/build-manifest.py",
+      "counted": true,
+      "language": "python",
+      "code": 158,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/build-rule-classes.py",
+      "counted": true,
+      "language": "python",
+      "code": 43,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/case_catalog.py",
+      "counted": true,
+      "language": "python",
+      "code": 527,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/check-repo.sh",
+      "counted": true,
+      "language": "shell",
+      "code": 81,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/generate-report.py",
+      "counted": true,
+      "language": "python",
+      "code": 79,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/local-engine-scan.sh",
+      "counted": true,
+      "language": "shell",
+      "code": 96,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/synthetic_secrets.py",
+      "counted": true,
+      "language": "python",
+      "code": 40,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/test_verify_findings.py",
+      "counted": true,
+      "language": "python",
+      "code": 189,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/tools/tg-loc/main.go",
+      "counted": true,
+      "language": "go",
+      "code": 48,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/tools/tg-postprocess/main.go",
+      "counted": true,
+      "language": "go",
+      "code": 243,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/verify-findings.py",
+      "counted": true,
+      "language": "python",
+      "code": 392,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    },
+    {
+      "file": "scripts/verify-loc.py",
+      "counted": true,
+      "language": "python",
+      "code": 335,
+      "basis": "reference-counter",
+      "sonarcloud": "pending"
+    }
+  ]
+}

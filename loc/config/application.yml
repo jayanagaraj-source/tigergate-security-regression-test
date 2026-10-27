@@ -1,0 +1,6 @@
+# Spring application configuration: runtime configuration, not counted.
+spring:
+  application:
+    name: loc-fixture
+server:
+  port: 8080
