@@ -1,6 +1,6 @@
 # TigerGate security regression report
 
-Generated 2026-10-27 07:35 UTC. Expected results: `expected/`. A scan that ran is not a pass: only the outcomes below count.
+Generated 2026-10-27 09:23 UTC. Expected results: `expected/`. A scan that ran is not a pass: only the outcomes below count.
 
 ## Case inventory (342 cases)
 
@@ -19,6 +19,27 @@ Generated 2026-10-27 07:35 UTC. Expected results: `expected/`. A scan that ran i
 | 11. JavaScript unsafe-formatstring and log injection | 26 | 25 | 1 | 0 | 26 | - | javascript, typescript |
 | 12. Zip-slip detection | 18 | 15 | 3 | 0 | 18 | - | go, java, javascript, python, typescript |
 | 13. Python inline SQL injection false positives | 10 | 10 | 4 | 0 | 10 | - | python |
+
+## dashboard (`dashboard.json`)
+
+Finding types verified: sast, sca, secret
+
+| Issue | TP | FP | FN | TN | Duplicates | Misclassified | Unverified | Known gaps | Precision | Recall | Status |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 2. LOC: lockfiles, generated code, minified JavaScript | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1.000 | 1.000 | PASS |
+| 3. Path-traversal false positives | 30 | 5 | 0 | 18 | 0 | 0 | 0 | 0 | 0.857 | 1.000 | FAIL |
+| 4. Duplicate secret findings | 10 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 1.000 | 1.000 | FAIL |
+| 5. Secret false positives | 6 | 4 | 1 | 12 | 0 | 0 | 0 | 0 | 0.600 | 0.857 | FAIL |
+| 6. JavaScript XSS false positives and missed XSS | 16 | 6 | 0 | 9 | 0 | 0 | 0 | 1 | 0.727 | 1.000 | FAIL |
+| 7. PHP SQL injection misclassification and XPath detection | 21 | 1 | 0 | 12 | 0 | 0 | 0 | 3 | 0.955 | 1.000 | FAIL |
+| 8. Python SQL taint false positives | 10 | 7 | 0 | 3 | 0 | 0 | 0 | 0 | 0.588 | 1.000 | FAIL |
+| 9. Java XSS JAVA-011 | 10 | 3 | 0 | 9 | 0 | 0 | 0 | 2 | 0.769 | 1.000 | FAIL |
+| 10. C/C++ format string CPP-002 | 10 | 1 | 0 | 11 | 0 | 0 | 0 | 1 | 0.909 | 1.000 | FAIL |
+| 11. JavaScript unsafe-formatstring and log injection | 26 | 3 | 0 | 22 | 0 | 0 | 0 | 1 | 0.897 | 1.000 | FAIL |
+| 12. Zip-slip detection | 18 | 1 | 0 | 14 | 0 | 0 | 0 | 3 | 0.947 | 1.000 | FAIL |
+| 13. Python inline SQL injection false positives | 10 | 8 | 0 | 2 | 0 | 0 | 0 | 4 | 0.556 | 1.000 | FAIL |
+
+Unattributed findings: 29. Details: `dashboard.md`.
 
 ## local engines + TigerGate post-processing (`local-engine-processed.json`)
 
@@ -62,6 +83,11 @@ Finding types verified: sast, sca, secret
 
 Unattributed findings: 63. Details: `local-engine-raw.md`.
 
+## LOC (`loc-dashboard.json`)
+
+- Dashboard (stored metrics): expected 4000, actual 3999 (**differs**)
+- SonarCloud: pending
+
 ## LOC (`loc-local.json`)
 
 - worker counter (local build): expected 4000, actual 3999 (**differs**)
@@ -76,3 +102,7 @@ Unattributed findings: 63. Details: `local-engine-raw.md`.
 ## LOC (`local-engine-raw.json`)
 
 - SonarCloud: compared
+
+## Consistency: local engines + TigerGate post-processing vs dashboard
+
+0 case outcomes differ.

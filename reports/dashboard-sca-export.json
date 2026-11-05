@@ -1,0 +1,5 @@
+[{"file_path":"loc/excluded-files/package-lock.json","start_line":0,"rule_id":"CVE-2020-28500","finding_type":"sca"}, 
+ {"file_path":"loc/excluded-files/package-lock.json","start_line":0,"rule_id":"CVE-2021-23337","finding_type":"sca"}, 
+ {"file_path":"loc/excluded-files/package-lock.json","start_line":0,"rule_id":"CVE-2025-13465","finding_type":"sca"}, 
+ {"file_path":"loc/excluded-files/package-lock.json","start_line":0,"rule_id":"CVE-2026-2950","finding_type":"sca"}, 
+ {"file_path":"loc/excluded-files/package-lock.json","start_line":0,"rule_id":"CVE-2026-4800","finding_type":"sca"}]

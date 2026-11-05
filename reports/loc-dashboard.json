@@ -1,0 +1,79 @@
+{
+  "expected_total": 4000,
+  "comparisons": [
+    {
+      "name": "Dashboard (stored metrics)",
+      "expected_total": 4000,
+      "actual_total": 3999,
+      "per_language": [
+        {
+          "language": "c",
+          "expected": 79,
+          "actual": null
+        },
+        {
+          "language": "cpp",
+          "expected": 11,
+          "actual": null
+        },
+        {
+          "language": "dockerfile",
+          "expected": 6,
+          "actual": null
+        },
+        {
+          "language": "go",
+          "expected": 334,
+          "actual": null
+        },
+        {
+          "language": "java",
+          "expected": 135,
+          "actual": null
+        },
+        {
+          "language": "javascript",
+          "expected": 915,
+          "actual": null
+        },
+        {
+          "language": "php",
+          "expected": 182,
+          "actual": null
+        },
+        {
+          "language": "python",
+          "expected": 1977,
+          "actual": null
+        },
+        {
+          "language": "shell",
+          "expected": 177,
+          "actual": null
+        },
+        {
+          "language": "terraform",
+          "expected": 13,
+          "actual": null
+        },
+        {
+          "language": "typescript",
+          "expected": 151,
+          "actual": null
+        },
+        {
+          "language": "xml",
+          "expected": 7,
+          "actual": null
+        },
+        {
+          "language": "yaml",
+          "expected": 13,
+          "actual": null
+        }
+      ],
+      "per_file": "not available in this export"
+    }
+  ],
+  "sonarcloud": "pending"
+}

@@ -144,12 +144,21 @@ docker exec -i tigergate-postgres psql -U tigergate -d tigergate -At -c "
     SELECT i.file_path, coalesce(i.start_line, i.line_start) AS start_line, coalesce(i.end_line, i.line_end) AS end_line,
            i.rule_id, i.cwe_ids, i.issue_type, i.category, s.scan_type, s.scan_tool
     FROM sast_issues i JOIN sast_scans s ON s.id = i.scan_id
-    WHERE s.provider_repo_name = 'tigergate-security-regression-test' AND s.commit_sha = '<SHA>'
-      AND s.scan_type IN ('full-scan', 'secret')) t;" > reports/dashboard-export.json
+    WHERE s.id IN ('<latest full-scan id>', '<latest secret scan id>')) t;" | sed 1d > reports/dashboard-export.json
 ```
 
-   If the export repeats a commit across several scans, keep only the latest `full-scan` and `secret`
-   scan IDs.
+   `sast_scans.commit_sha` and the provider names can be empty, so select the scans by ID: list them with
+   `SELECT id, scan_type, created_at FROM sast_scans WHERE repository_id = '<repository id from the
+   Dashboard URL>' ORDER BY created_at` and take the newest `full-scan` and `secret` rows. SCA findings
+   live in `vulnerabilities`:
+
+```sh
+docker exec -i tigergate-postgres psql -U tigergate -d tigergate -At -c "
+  SET default_transaction_read_only=on;
+  SELECT coalesce(json_agg(t), '[]') FROM (SELECT DISTINCT coalesce(file_path, package_path) AS file_path,
+    0 AS start_line, coalesce(cve_id, vulnerability_id, ghsa_id) AS rule_id, 'sca' AS finding_type
+    FROM vulnerabilities WHERE repository_id = '<repository id>' AND status = 'open') t;" | sed 1d > reports/dashboard-sca-export.json
+```
 
 ### CLI
 
@@ -172,7 +181,7 @@ the query above, using `s.scan_type = 'ci'`, into `reports/cli-export.json`.
 ### Compare
 
 ```sh
-make verify FINDINGS=reports/dashboard-export.json LABEL=dashboard
+make verify FINDINGS='reports/dashboard-export.json reports/dashboard-sca-export.json' LABEL=dashboard
 make verify FINDINGS=reports/cli-export.json LABEL=cli
 make report COMPARE='reports/dashboard.json reports/cli.json'   # Dashboard vs CLI case outcomes
 ```
@@ -210,8 +219,8 @@ counter, which uses Python `tokenize`/`ast`, so it is independent of TigerGate's
 ```sh
 # TigerGate: export code_quality_metrics.metrics_json for the scan, read-only
 docker exec -i tigergate-postgres psql -U tigergate -d tigergate -At -c "SET default_transaction_read_only=on;
-  SELECT metrics_json FROM code_quality_metrics WHERE repository_name LIKE '%tigergate-security-regression-test'
-  AND commit_sha = '<SHA>' ORDER BY created_at DESC LIMIT 1;" > reports/metrics.json
+  SELECT metrics_json FROM code_quality_metrics WHERE repository_id = '<repository id>'
+  ORDER BY created_at DESC LIMIT 1;" > reports/metrics.json
 make verify-loc TIGERGATE_LOC=reports/metrics.json LABEL=dashboard
 
 # SonarCloud, after analysing the same commit
